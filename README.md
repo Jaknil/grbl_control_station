@@ -1,6 +1,6 @@
 
 # GRBL control station
-An exploration of alternative ways of interacting with hobbyist CNC machines, focusing on reducing beginner intimidation. 
+An exploration of ways of interacting with hobbyist CNC machines, focusing on reducing beginner intimidation. 
 
 ### Some terms before we begin
 * CNC - ([wiki](https://en.wikipedia.org/wiki/Numerical_control)) machines are computer controlled machines used to make things.
@@ -16,8 +16,13 @@ I want to lower the intimidation factor of using a hobbyist CNC milling machine.
   
 Compare the user experience when faced with learning to use a typical grbl CNC milling machine with learning to use a RAMPS 3D printer.
 
-### The 3D printer experience
-* The user slices their chosen model in Cura using 
+### A generic RAMPS 3D printer with a Smart controller
+* Generates gcode in cura (*this can be expanded upon*)
+* Saves the gcode on an SD card
+* Inserts the SD card into the printer
+* Interacts with the ONLY button
+* Chooses the file and presses to run it
+* The printer automatically homes and 
 
 It's common for users to use SD cards to load gcode into 3D printers and users are used to simple, few-button interfaces to start and stop jobs.
 
@@ -36,9 +41,14 @@ Notable ways of controlling grbl:
 * [LCD ob grbl](https://wiki.shapeoko.com/index.php/LCD_on_GRBL#Full_version_GRBL_1.1) using a Arduino Leonardo and an LCD to make a simple DRO.
 
 Forum logs
-* [LCD + SD](https://github.com/grbl/grbl/issues/717)
+* [LCD + SD](https://github.com/grbl/grbl/issues/717) Headless by modding smart controller
 * [LCD+SD+knob](https://github.com/gnea/grbl-Mega/issues/77)
 * [XLCD serial proxy](https://wiki.shapeoko.com/index.php/XLCD)
+
+LCD mega
+* http://www.bartvenneker.nl/Arduino/index.php?art=0025
+
+
 
 
 
@@ -50,9 +60,15 @@ To be investigated further:
 * Does a limited interface force the user to best practices and reduces the stress of choise?
 
 
+## Smart controller  esp?
+RepRapDiscount Full Graphic Smart Controller
+
+
+
 # Ideas
 
 ## ESP8266 controller -> Grbl motion planner on an arduino
+* ESP for controls and file handling, arduino for motion control
 * Physical serial connection Tx Rx, not USB
 * Streams gcode to a standard separate grbl microcontroller
 * LCD display
@@ -62,3 +78,11 @@ To be investigated further:
 * Simple menu system to run files, allows for homeing sequences, firmware config, jogging using small relative motion gcode files.
 * Wifi credentials can be stored on SD card
 
+
+
+## ESP32, all in one solution
+* One core does motion control  (not how below has implemneted it)
+* One core does wifi, handle displays and files etc (seems hard to do and mod, interupts etc)
+* http://www.buildlog.net/blog/2018/07/grbl-cnc-firmware-on-esp32/
+* https://github.com/bdring/Grbl_Esp32
+Grbl maker also recommend dedicated microcontroller to motion control
