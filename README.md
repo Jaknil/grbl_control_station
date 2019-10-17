@@ -30,10 +30,6 @@ My starting point for doing this research is that I previously did a [Smart Cont
 
 I have also made a crude jogging controller for grbl during Fab Academy 
 
-
-
-
-
 Notable ways of controlling grbl:
 * [The official list](https://github.com/gnea/grbl/wiki/Using-Grbl#how-to-stream-g-code-programs-to-grbl)
 * [Universal Gcode sender - platform](https://winder.github.io/ugs_website/) A Java, cross platform Gcode streaming and jogging program used to connect and **control grbl from a computer over a USB to serial connection**. Popular among fabricatable machines users. (*Note that UGS also has a built in local webserver that makes you smartphone into a wireless jogging-pendant.*)
@@ -48,10 +44,6 @@ Forum logs
 LCD mega
 * http://www.bartvenneker.nl/Arduino/index.php?art=0025
 
-
-
-
-
 There are many more variations but these should be representative of the mayor ways one can control grbl.
 
 To be investigated further:
@@ -59,11 +51,10 @@ To be investigated further:
 * buy and adapt the $5 ramps smart controller directly? https://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 * Does a limited interface force the user to best practices and reduces the stress of choise?
 
+## Adapting the Smartcontroller to ESP8266
 
-## Smart controller  esp?
-RepRapDiscount Full Graphic Smart Controller
-
-
+* [Pinout from the smartcontroller](https://docs.google.com/spreadsheets/d/19lpjkqaOqPkHmnNl6rEzy1P8AtqGDscS7eaFzm6XpZ4/edit?usp=sharing
+)
 
 # Ideas
 
@@ -77,7 +68,6 @@ RepRapDiscount Full Graphic Smart Controller
 * Wifi webserver on local network allows gcode files to be sent to SD card wirelessly
 * Simple menu system to run files, allows for homeing sequences, firmware config, jogging using small relative motion gcode files.
 * Wifi credentials can be stored on SD card
-
 
 
 ## ESP32, all in one solution
