@@ -53,6 +53,7 @@ To be investigated further:
 
 ## Adapting the Smartcontroller to ESP8266
 
+* [Getting started thread](https://reprap.org/forum/read.php?1,675863)
 * [Pinout from the smartcontroller](https://docs.google.com/spreadsheets/d/19lpjkqaOqPkHmnNl6rEzy1P8AtqGDscS7eaFzm6XpZ4/edit?usp=sharing
 )
 
