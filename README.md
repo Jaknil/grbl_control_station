@@ -56,6 +56,9 @@ To be investigated further:
 * [Getting started thread](https://reprap.org/forum/read.php?1,675863)
 * [Pinout from the smartcontroller](https://docs.google.com/spreadsheets/d/19lpjkqaOqPkHmnNl6rEzy1P8AtqGDscS7eaFzm6XpZ4/edit?usp=sharing
 )
+* [Schematic of the controller](Smart_adapter_wifi/RRD_FULL_GRAPHIC_SMART_CONTROLER_SCHEMATIC.pdf)
+* [LCD datasheet](Smart_adapter_wifi/LCD KXM12864M-3 770116.pdf)
+* [Ribbon cable connector schematic](LCD_connect_SCHDOC.pdf)
 
 # Ideas
 
